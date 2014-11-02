@@ -1,9 +1,9 @@
-map <C-j> <ESC>
+map <C-j> <C-[>
 nnoremap <F5> :silent update<Bar>silent !firefox %:p &<CR>
 set nocompatible               " be iMproved
 filetype off
-
 set clipboard+=unnamed
+set noswapfile
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -11,7 +11,7 @@ if has('vim_starting')
 endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
+"NeoBundle 'Shougo/vimproc'
 NeoBundle 'VimClojure'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
@@ -30,6 +30,7 @@ NeoBundle 'othree/html5-syntax.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundleLazy 'jelera/vim-javascript-syntax',{'autoload':{'filetypes':['javascript']}}
+NeoBundle 'kien/ctrlp.vim'
 
 
 filetype plugin indent on     " required!
