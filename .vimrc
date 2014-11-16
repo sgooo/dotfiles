@@ -1,8 +1,10 @@
-map <C-j> <C-[>
+imap <C-j> <C-[>
 nnoremap <F5> :silent update<Bar>silent !firefox %:p &<CR>
 set nocompatible               " be iMproved
 filetype off
+set guioptions+=a
 set clipboard+=unnamed
+set clipboard+=autoselect
 set noswapfile
 
 if has('vim_starting')
@@ -102,6 +104,7 @@ autocmd BufWritePre *.js :call JsBeautify()
 autocmd FileType *.html  :call HtmlBeautify()
 " for css or scss
 autocmd FileType *.css  :call CSSBeautify()
+autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 syntax enable
 colorscheme monokai
